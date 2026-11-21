@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal RPL SMKN 9 Medan - Responsive Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo">RPL SMKN 9 MEDAN</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#">Beranda</a>
+        <a href="#">Kurikulum</a>
+        <a href="#">Karya Siswa</a>
+        <a href="#">Kontak</a>
+      </nav>
+
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+    </header>
+
+    <!-- SIDEBAR KIRI -->
+    <aside class="sidebar-kiri" id="sidebarKiri">
+      <img src="https://yourimageshare.com/ib/B945VaHzjr.png"
+           alt="Logo SMKN 9 Medan" class="logo-img">
+
+      <h3>Menu Cepat</h3>
+      <ul>
+        <li>Jadwal Praktikum</li>
+        <li>Modul Pemrograman Web</li>
+        <li>Daftar Lab RPL</li>
+        <li>Info PKL &amp; LSP</li>
+      </ul>
+    </aside>
+
+    <!-- KONTEN UTAMA -->
+    <main class="konten-utama">
+      <h2>Berita &amp; Proyek Terbaru Kelas XII RPL</h2>
+
+      <div class="card-grid">
+
+        <!-- CARD 1 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600"
+               alt="Aplikasi Inventaris QR">
+          <h4>Aplikasi Inventaris QR</h4>
+          <p>Sistem peminjaman alat laboratorium berbasis web responsif dengan pemindai QR Code.</p>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600"
+               alt="Portal CBT Online">
+          <h4>Portal CBT Online</h4>
+          <p>Platform ujian berbasis komputer yang adaptif pada desktop lab maupun smartphone.</p>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600"
+               alt="E-Katalog Produk PKK">
+          <h4>E-Katalog Produk PKK</h4>
+          <p>Etalase digital karya kreatif siswa /proyek Rekayasa Perangkat Lunak.</p>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600"
+               alt="Sistem Absensi Kelas RFID">
+          <h4>Sistem Absensi Kelas RFID</h4>
+          <p>Pencatatan kehadiran siswa secara real-time terintegrasi dengan rekap wali kelas.</p>
+        </article>
+
+        <!-- CARD 5 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600"
+               alt="Portal Monitoring PKL">
+          <h4>Portal Monitoring PKL</h4>
+          <p>Aplikasi jurnal harian dan bimbingan PKL antara siswa, industri, dan guru pembimbing.</p>
+        </article>
+
+        <!-- CARD 6 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600"
+               alt="Bank Soal dan Latihan UKK">
+          <h4>Bank Soal &amp; Latihan UKK</h4>
+          <p>Kumpulan studi kasus pengembangan web dan basis data untuk persiapan uji kompetensi.</p>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- WIDGET PROMO KANAN -->
+    <aside class="widget-promo">
+      <img src="https://yourimageshare.com/ib/DUev43oNoc.png"
+           alt="Logo Jurusan RPL" class="logo-img">
+
+      <h3>Info &amp; Promo Lab</h3>
+
+      <div class="promo-box">
+        <strong>Uji Kompetensi LSP!</strong>
+        <p>Persiapkan portofolio web responsif kalian sebelum jadwal asesmen.</p>
+      </div>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2026 Jurusan RPL SMK Negeri 9 Medan - Modul Pemrograman Web Lanjut</p>
+    </footer>
+
+  </div>
+
+  <!-- TOMBOL CHATBOT -->
+  <button class="chat-toggle-btn" id="chatToggleBtn" aria-label="Buka Chat">
+    &#128172; Tanya RPL
+  </button>
+
+  <!-- WIDGET CHATBOT -->
+  <div class="chatbot-box" id="chatbotBox">
+
+    <div class="chat-header">
+      <span>Asisten Virtual SMKN 9 Medan</span>
+      <button class="chat-close-btn" id="chatCloseBtn">&times;</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg bot">
+        Halo! Ada yang ingin ditanyakan seputar SMKN 9 Medan &amp; Jurusan RPL?
+        Pilih pertanyaan di bawah atau ketik langsung:
+      </div>
+    </div>
+
+    <!-- 4 PERTANYAAN CEPAT -->
+    <div class="chat-quick-questions">
+
+      <button class="quick-btn" onclick="askQuestion(1)">
+        1. Dimana lokasi SMKN 9 Medan?
+      </button>
+
+      <button class="quick-btn" onclick="askQuestion(2)">
+        2. Apa saja jurusan di SMKN 9 Medan?
+      </button>
+
+      <button class="quick-btn" onclick="askQuestion(3)">
+        3. Apa yang dipelajari di RPL?
+      </button>
+
+      <button class="quick-btn" onclick="askQuestion(4)">
+        4. Siapa saja nama guru SMKN 9 Medan?
+      </button>
+
+    </div>
+
+    <!-- INPUT CHAT -->
+    <form class="chat-input-area" id="chatForm">
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Ketik pertanyaan..."
+        autocomplete="off"
+      >
+      <button type="submit">Kirim</button>
+    </form>
+
+  </div>
+
+  <!-- SCRIPT JAVASCRIPT -->
+  <script>
+
+    // TOGGLE SIDEBAR DAN NAVIGASI MOBILE
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const sidebarKiri = document.getElementById('sidebarKiri');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerBtn.addEventListener('click', function () {
+      sidebarKiri.classList.toggle('aktif');
+      navLinks.classList.toggle('aktif');
+    });
+
+
+    // DATABASE PERTANYAAN DAN JAWABAN
+    const qaData = {
+
+      1: {
+        q: "Dimana lokasi SMKN 9 Medan?",
+        a: "SMK Negeri 9 Medan beralamat di Jl. Patriot No. 20 A, Lalang, Kec. Medan Sunggal, Kota Medan, Sumatera Utara."
+      },
+
+      2: {
+        q: "Apa saja jurusan di SMKN 9 Medan?",
+        a: "SMKN 9 Medan memiliki beberapa kompetensi keahlian, di antaranya Rekayasa Perangkat Lunak (RPL), Teknik Komputer dan Jaringan (TKJ), Multimedia / DKV, Pekerjaan Sosial, serta Animasi."
+      },
+
+      3: {
+        q: "Apa yang dipelajari di jurusan RPL?",
+        a: "Di jurusan RPL SMKN 9 Medan, siswa mempelajari pemrograman web (HTML, CSS, JS, PHP), pemrograman mobile (Android), basis data (MySQL), serta pengembangan perangkat lunak berbasis objek."
+      },
+
+      4: {
+        q: "Siapa saja nama guru di SMKN 9 Medan?",
+        a: `Berikut daftar nama guru SMKN 9 Medan:
+
+1. Pak Ardiansyah
+2. Bu Gira
+3. Pak Bakara
+4. Bu Shenty
+5. Pak Novelman
+6. Pak Roy
+7. Bu Shinta
+8. Pak Gultom
+
+Semoga informasi ini membantu!`
+      }
+
+    };
+
+
+    // BUKA DAN TUTUP CHATBOT
+    const chatToggleBtn = document.getElementById('chatToggleBtn');
+    const chatbotBox = document.getElementById('chatbotBox');
+    const chatCloseBtn = document.getElementById('chatCloseBtn');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+
+    chatToggleBtn.addEventListener('click', () => {
+      chatbotBox.classList.toggle('open');
+    });
+
+    chatCloseBtn.addEventListener('click', () => {
+      chatbotBox.classList.remove('open');
+    });
+
+
+    // MENAMBAHKAN PESAN KE LAYAR CHAT
+    function appendMessage(text, sender) {
+      const msgDiv = document.createElement('div');
+      msgDiv.classList.add('msg', sender);
+      msgDiv.textContent = text;
+      chatMessages.appendChild(msgDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+
+    // FUNGSI TOMBOL PERTANYAAN CEPAT
+    function askQuestion(id) {
+      const item = qaData[id];
+
+      if (!item) return;
+
+      appendMessage(item.q, 'user');
+
+      setTimeout(() => {
+        appendMessage(item.a, 'bot');
+      }, 350);
+    }
+
+
+    // FUNGSI INPUT PERTANYAAN MANUAL
+    chatForm.addEventListener('submit', function (e) {
+
+      e.preventDefault();
+
+      const userText = chatInput.value.trim();
+
+      if (!userText) return;
+
+      appendMessage(userText, 'user');
+
+      chatInput.value = '';
+
+      const lower = userText.toLowerCase();
+
+      let reply = "Maaf, saya belum memahami pertanyaan tersebut. Silakan tanyakan tentang lokasi sekolah, jurusan, materi RPL, atau nama guru SMKN 9 Medan.";
+
+      if (
+        lower.includes('lokasi') ||
+        lower.includes('alamat') ||
+        lower.includes('dimana')
+      ) {
+        reply = qaData[1].a;
+
+      } else if (
+        lower.includes('jurusan') ||
+        lower.includes('prodi') ||
+        lower.includes('keahlian')
+      ) {
+        reply = qaData[2].a;
+
+      } else if (
+        lower.includes('rpl') ||
+        lower.includes('pelajari') ||
+        lower.includes('belajar') ||
+        lower.includes('materi')
+      ) {
+        reply = qaData[3].a;
+
+      } else if (
+        lower.includes('guru') ||
+        lower.includes('nama guru') ||
+        lower.includes('pengajar') ||
+        lower.includes('siapa saja guru')
+      ) {
+        reply = qaData[4].a;
+      }
+
+      setTimeout(() => {
+        appendMessage(reply, 'bot');
+      }, 400);
+
+    });
+
+  </script>
+
+</body>
+</html>
